@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "8e697687-bae9-4f0f-85fd-243d45277952",
+		"name": "coleciontestneoris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1066442"
+	},
+	"item": [
+		{
+			"name": "crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identification\":233242345,\r\n   \"name\":\"Jose Lema\",\r\n   \"genre\":\"M\",\r\n   \"age\":25,\r\n   \"address\":\"Otavalo sn y principal\",\r\n   \"phone\":\"098254785\",\r\n   \"password\":\"1234\",\r\n   \"estado\":\"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"typeAccount\":\"SAVINGS\",\r\n   \"initialAmount\":\"2000000\",\r\n   \"amount\":\"2000000\",\r\n   \"state\":\"true\",\r\n   \"client\":{\r\n      \"identification\":233242345\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar movimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":2,\r\n  \"typeMovement\":\"DEBIT\",\r\n  \"movement\":332434,\r\n  \"account\":{\r\n     \"accountNumber\":4\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generar reporte",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startDate\":1673712000000,\r\n  \"endDate\":1673755200000,\r\n  \"identification\":12345\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/movement?startDate=1673672400000&endDate=1675054800000&identification=23324234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movement"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "1673672400000"
+						},
+						{
+							"key": "endDate",
+							"value": "1675054800000"
+						},
+						{
+							"key": "identification",
+							"value": "23324234"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
