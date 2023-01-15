@@ -2,9 +2,7 @@ package com.neoris.testneoris.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.neoris.testneoris.dtos.*;
-import com.neoris.testneoris.entities.TestEntity;
 import com.neoris.testneoris.services.MovementService;
-import com.neoris.testneoris.services.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

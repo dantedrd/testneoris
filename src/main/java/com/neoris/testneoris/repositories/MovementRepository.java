@@ -1,7 +1,6 @@
 package com.neoris.testneoris.repositories;
 
 import com.neoris.testneoris.entities.MovementEntity;
-import com.neoris.testneoris.entities.TestEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

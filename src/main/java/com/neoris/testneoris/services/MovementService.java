@@ -1,8 +1,6 @@
 package com.neoris.testneoris.services;
 
-import com.neoris.testneoris.adapters.AccountAdapterRepository;
 import com.neoris.testneoris.adapters.MovementAdapterRepository;
-import com.neoris.testneoris.adapters.TestAdapterRepository;
 import com.neoris.testneoris.dtos.AccountDto;
 import com.neoris.testneoris.dtos.MovementDto;
 import com.neoris.testneoris.dtos.MovementRequestDto;
@@ -10,7 +8,6 @@ import com.neoris.testneoris.dtos.ReportMovementDto;
 import com.neoris.testneoris.enums.MovementType;
 import com.neoris.testneoris.exceptions.BusinessException;
 import com.neoris.testneoris.exceptions.Type;
-import com.neoris.testneoris.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
