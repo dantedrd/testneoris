@@ -20,7 +20,7 @@ public class MovementController {
         return new ResponseDto<>(movementService.saveMovement(movementDto),"");
     }
 
-    @GetMapping()
+    @GetMapping("/reports")
     public ResponseDto<List<ReportMovementDto>> getMovements(@RequestParam Map<String,String> movementRequest) {
         ObjectMapper mapper = new ObjectMapper();
         MovementRequestDto movementRequestDto = mapper.convertValue(movementRequest, MovementRequestDto.class);
